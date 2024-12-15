@@ -226,18 +226,3 @@ SELECT Mnth AS "Month",COUNT(Mnth) AS "No_Of_Purchases" FROM
 MONTHNAME(FIRST_VALUE(Order_date) OVER(PARTITION BY PurchaseAddress ORDER BY Order_date)) AS Mnth
 FROM sales_data) a
 GROUP BY Mnth;
-
-/*
-total sales total quantity trend analysis
-top 5 cities with max quantity sold
-top 5 cities with max sales
-% contribution of top 5 cities in max sales
-most selling product in terms of revenue and its contribution in total sales
-best selling product performance across all cities
-query to understand repetition of products 
-query to understand first product
-query to understand month that brings new costomers
-*/
--- Using Subqueries, retrieved shipping addresses with minimum of 3 orders to examine relationship between products.
--- Utilized SQL for cleaning data and analysing business trends and KPI's 
--- Incorporated CTE's in order to analyse 1'st product purchased and 
